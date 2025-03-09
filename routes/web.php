@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\SkinQuizController;
+use App\Http\Controllers\SkinResultController;
 
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
@@ -11,3 +13,7 @@ Route::get('/shop-details/{id}/{name}', [PublicController::class, 'details'])->n
 
 Route::get('/review/index', [ReviewController::class, 'index'])->name('review.index');
 Route::post('/review/store', [ReviewController::class, 'store'])->name('review.store');
+
+
+Route::get('/quiz', [SkinQuizController::class, 'index'])->name('quiz.index');
+Route::post('/quiz/save', [SkinQuizController::class, 'saveResult'])->name('quiz.save');
