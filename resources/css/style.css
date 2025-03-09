@@ -8,3 +8,292 @@
         --white: #FFFFFF,
         --off-white: #F9F9FC,
 }
+
+body {
+    font-family: "Poppins";
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar */
+
+.navbar ul {
+    gap: 30px
+}
+
+
+/* Header */
+.bg-first {
+    background-image: url(/public/images/first-screen.png);
+    height: 708px;
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-custom {
+    background-color: #F5A3B7;
+    color: white;
+    transition: all 1s;
+    font-weight: bold;
+
+}
+
+.btn-custom:hover {
+    background-color: #383838;
+    color: white;
+
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #383838;
+    text-transform: uppercase;
+    line-height: 53px;
+}
+
+
+/* Set Section */
+.set p {
+    color: #697586;
+    font-family: "Montserrat";
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f3f3f3;
+    color: #555;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+.explore {
+    color: #555;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.explore:hover {
+    color: #000;
+}
+
+/* Quiz */
+.quiz-section {
+    background-color: #fef7f8;
+}
+
+.quiz-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quiz-section p {
+    color: #697586;
+    font-family: "Montserrat";
+}
+
+.quiz-image img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.quiz-text {
+    max-width: 400px;
+}
+
+/* Gallery */
+.gallery-title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.highlight {
+    color: #f78da7;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.btn-follow {
+    background-color: #f8a8b6;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer p {
+    font-family: "Montserrat";
+    color: white;
+}
+
+.footer a {
+    color: #b8b8b8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer a:hover {
+    color: #f8a8b6;
+}
+
+.footer .social-icons a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: white;
+}
+
+.footer .social-icons a:hover {
+    color: #f8a8b6;
+}
+
+.footer .subscribe input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.footer .subscribe button {
+    background: none;
+    border: none;
+    color: #f8a8b6;
+    font-weight: bold;
+}
+
+.footer .bottom-bar {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #b8b8b8;
+}
+
+.link-pink {
+    color: #F5A3B7
+}
+
+
+/* Carousel */
+body {
+    background-color: #fdfdfd;
+}
+
+.carousel-inner {
+    padding: 20px 0;
+}
+
+.card {
+    border: none;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    border-radius: 10px;
+
+    object-fit: cover;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card-text {
+    color: #697586;
+    font-family: "Montserrat";
+    font-size: 0.9rem;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-add {
+    background: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 10px;
+    width: 100%;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.btn-add:hover {
+    background-color: black;
+    color: white;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff7b7b;
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.see-all {
+    text-decoration: none;
+    color: #697586;
+    transition: all 1s;
+}
+
+.see-all:hover {
+    text-decoration: underline;
+    color: #f8a8b6;
+}
+
+@media screen and (max-width: 992px) {
+
+    .card-text {
+        font-size: 12px
+    }
+
+    .btn-add {
+        font-size: 10px
+    }
+}

@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="/images/Bloom Beauty.png" alt=""></a>
+        <a class="navbar-brand ps-md-5" href="#"><img src="/images/Bloom Beauty.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Shop All</a>
                 </li>
@@ -23,17 +23,34 @@
                 </li>
             </ul>
 
-            <ul>
+            <!-- Right links -->
+            <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0 text-uppercase">
                 <li class="nav-item text-center mx-2 mx-lg-1">
                     <a class="nav-link" href="#!">
                         <div>
-                            <i class="fas fa-globe-americas fa-lg mb-1"></i>
-                            <span class="badge rounded-pill badge-notification bg-dark">11</span>
+                            <i class="bi bi-search-heart fs-5"></i>
                         </div>
-                        News
+                        Search
+                    </a>
+                </li>
+                <li class="nav-item text-center mx-2 mx-lg-1">
+                    <a class="nav-link" href="#!">
+                        <div>
+                            <i class="bi bi-person fs-5"></i>
+                        </div>
+                        Account
+                    </a>
+                </li>
+                <li class="nav-item text-center mx-2 mx-lg-1">
+                    <a class="nav-link" href="#!">
+                        <div>
+                            <i class="bi bi-bag-heart fs-5"></i>
+                        </div>
+                        Cart
                     </a>
                 </li>
             </ul>
+            <!-- Right links -->
         </div>
     </div>
 </nav>
