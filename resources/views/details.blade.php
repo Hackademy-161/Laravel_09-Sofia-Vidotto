@@ -120,7 +120,7 @@
         <p class="text-center text-muted">⭐⭐⭐⭐⭐ 5 reviews</p>
 
         <div class="text-center mb-3">
-            <button class="btn btn-outline-dark write-review-btn my-5">Write a Review <i class="bi bi-arrow-right-circle p-1"></i></button>
+            <a class="btn btn-outline-dark write-review-btn my-5 " href="{{ route('review.index')}}">Write a Review <i class="bi bi-arrow-right-circle p-1"></i></a>
         </div>
 
         <div class="row justify-content-center">
