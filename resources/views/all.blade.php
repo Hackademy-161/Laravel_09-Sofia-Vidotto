@@ -19,7 +19,6 @@
                     <input class="form-check-input filter-type" type="checkbox" value="water-cleansers" id="water-cleansers">
                     <label class="form-check-label" for="water-cleansers">Water Cleansers</label>
                 </div>
-                <h4 class="mt-3">Filter</h4>
                 <h5>Skin Type</h5>
                 <div class="form-check">
                     <input class="form-check-input filter-skin" type="checkbox" value="all" id="all-skin" checked>
@@ -64,11 +63,15 @@
                         value="{{ $product['type']}}"
                         id="{{ $product['skin'] }}">
                         <div class="card position-relative">
-                            <span class="discount-badge">-20%</span>
-                            <img src="{{ $product['image'] }}" class="card-img-top img-fluid" alt="{{ $product['name'] }}">
+                            @if (!empty($product['discount']))
+                            <span class="discount-badge">-{{ $product['discount'] }}%</span>
+                            @endif
+                            <a href="{{route('details', ['id' => $product['id'], 'name' => $product['name'] ])}}"><img src="{{ $product['image'] }}" class="card-img-top img-fluid" alt="{{ $product['name'] }}"></a>
                             <div class="card-body">
-                                <a href="{{route('shop.details', ['id' => $product['id'], 'name' => $product['name'] ])}}"><h6 class="card-title">{{ $product['name'] }}</h6></a>
-                                <div class="stars">★★★★★ (0)</div>
+                                <a href="{{route('details', ['id' => $product['id'], 'name' => $product['name'] ])}}">
+                                    <h6 class="card-title">{{ $product['name'] }}</h6>
+                                </a>
+                                <div class="stars">★★★★★ (5)</div>
                                 <p class="card-text">{{ $product['desc'] }}</p>
                                 <p class="price">${{ $product['price'] }}</p>
                                 <button class="btn-add">Add To Bag</button>
@@ -80,5 +83,5 @@
             </main>
         </div>
     </div>
-   
+
 </x-layout>

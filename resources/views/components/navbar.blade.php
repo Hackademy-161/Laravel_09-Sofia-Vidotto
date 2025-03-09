@@ -7,10 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('shop.all')}}">Shop All</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Bestsellers</a>
+                    <a class="nav-link" href="{{route('all')}}">Shop All</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Collection</a>

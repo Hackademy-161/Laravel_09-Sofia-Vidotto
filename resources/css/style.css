@@ -338,8 +338,20 @@ h1 {
     border-radius: 5px;
 }
 
+.top-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #B0A6BD;
+    color: white;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
 .stars {
     color: #ffd700;
+    font-weight: normal;
 }
 
 .see-all {
@@ -378,7 +390,8 @@ h1 {
     display: none;
 }
 
-.filter-section h4, .filter-section h5{
+.filter-section h4,
+.filter-section h5 {
     font-weight: bold;
 }
 
@@ -423,12 +436,107 @@ button#apply-filters:hover {
     background: #000;
     color: #fff;
 }
+
 .form-check-input:checked {
     background-color: #f78da7;
     border-color: #f78da7;
 }
+
 .form-check-input:focus {
     border-color: #f7bccb;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(252, 205, 217, 0.493);
+}
+
+/* Details */
+.card a {
+    text-decoration: none
+}
+
+.card h6 {
+    color: #383838;
+    transition: all 1s;
+}
+
+.card h6:hover {
+    color: #f78da7;
+    text-decoration: underline;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #383838;
+    font-weight: bold;
+    background-color: #f78da865;
+    box-shadow: 0 0 8px #f78da7;
+    border: 1px solid #f78da844;
+}
+.accordion-item{
+font-family: "Montserrat";
+}
+
+
+.product-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom-details {
+    background-color: #f8a1b0;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn-custom-details:hover {
+    background-color: #f28597;
+}
+
+
+/* Review */
+.review-card {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.review-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.review-header h6 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.review-stars {
+    color: #ffcc00;
+}
+.review-date {
+    font-size: 0.9rem;
+    color: gray;
+}
+.write-review-btn {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+a.show-more {
+    color: black;
+    transition: all 1s;
+}
+a.show-more:hover {
+    color: #f28597
 }
