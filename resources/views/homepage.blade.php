@@ -1,4 +1,4 @@
-<x-layout title="Homepage">
+<x-layout title="Homepage - Bloom Beauty">
 
     <x-header />
 

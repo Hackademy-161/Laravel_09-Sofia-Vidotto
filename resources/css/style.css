@@ -363,3 +363,17 @@ h1 {
         font-size: 10px
     }
 }
+
+
+/* Filter System page shop */
+.filter-section {
+    max-width: 250px;
+}
+
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
