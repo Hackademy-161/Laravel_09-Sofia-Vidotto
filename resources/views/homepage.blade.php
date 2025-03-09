@@ -15,3 +15,4 @@
     <x-gallery />
 
 </x-layout>
+

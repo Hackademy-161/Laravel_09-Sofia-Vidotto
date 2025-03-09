@@ -23,6 +23,20 @@ ul {
     gap: 30px
 }
 
+a.nav-link {
+    color: #383838;
+    transition: all 1s;
+}
+
+a.nav-link:hover {
+    color: #f78da7;
+}
+
+.active {
+    font-weight: bold;
+    color: #f78da7 !important
+}
+
 
 /* Header */
 .bg-first {
@@ -69,6 +83,13 @@ h1 {
     border-radius: 20px;
     font-size: 14px;
     margin-right: 6px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: #f78da7;
+    color: white;
 }
 
 .explore {
@@ -119,9 +140,56 @@ h1 {
     color: #f78da7;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.gallery .col {
+    position: relative;
+    overflow: hidden;
+}
+
 .gallery img {
     width: 100%;
     border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery button {
+    padding: 8px 12px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.gallery button:hover {
+    background-color: #f78da7;
+}
+
+.gallery .col:hover img {
+    filter: blur(5px);
+}
+
+.gallery .col:hover .buttons {
+    opacity: 1;
 }
 
 .btn-follow {
@@ -197,9 +265,6 @@ h1 {
 
 
 /* Carousel */
-body {
-    background-color: #fdfdfd;
-}
 
 .carousel-inner {
     padding: 20px 0;
@@ -239,6 +304,7 @@ body {
     color: #697586;
     font-family: "Montserrat";
     font-size: 0.9rem;
+    font-weight: normal;
 }
 
 .price {
