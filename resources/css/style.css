@@ -377,3 +377,58 @@ h1 {
 .hidden {
     display: none;
 }
+
+.filter-section h4, .filter-section h5{
+    font-weight: bold;
+}
+
+aside.filter-section {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: Poppins, sans-serif;
+}
+
+.form-check {
+    margin-bottom: 8px;
+}
+
+.form-check-input {
+    accent-color: #000;
+    cursor: pointer;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+button#apply-filters {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button#apply-filters:hover {
+    background: #000;
+    color: #fff;
+}
+.form-check-input:checked {
+    background-color: #f78da7;
+    border-color: #f78da7;
+}
+.form-check-input:focus {
+    border-color: #f7bccb;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(252, 205, 217, 0.493);
+}

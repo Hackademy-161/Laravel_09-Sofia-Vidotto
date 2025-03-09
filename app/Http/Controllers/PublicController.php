@@ -11,8 +11,4 @@ class PublicController extends Controller
         return view('homepage');
     }
 
-    public function shop()
-    {
-        return view('shop');
-    }
 }
