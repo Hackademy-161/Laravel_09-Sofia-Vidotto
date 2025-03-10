@@ -22,6 +22,6 @@ class SkinQuizController extends Controller
             'skin_type' => $request->input('skin_type')
         ]);
 
-        return response()->json(['message' => 'Risultato salvato con successo!']);
+        return response()->json(['message' => 'Result saved!']);
     }
 }

@@ -31,12 +31,12 @@
                     </a>
                 </li>
                 <li class="nav-item text-center mx-2 mx-lg-1">
-                    <a class="nav-link" href="#!">
-                        <div>
-                            <i class="bi bi-person fs-5"></i>
-                        </div>
-                        Account
-                    </a>
+                        <i class="bi bi-person fs-5"></i>
+                
+                    <div class="d-flex flex-row">
+                    <a class="nav-link" href="{{route('register')}}">Register</a> |
+                    <a class="nav-link" href="{{route('register')}}">Login</a>
+                    </div>
                 </li>
                 <li class="nav-item text-center mx-2 mx-lg-1">
                     <a class="nav-link" href="#!">
