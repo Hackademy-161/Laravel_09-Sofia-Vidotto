@@ -1,5 +1,5 @@
 <footer class="footer pt-5">
-    <div class="container">
+    <div class="container ">
         <div class="row justify-content-center">
             <div class="col-12 pb-5">
                 <ul class="text-center d-flex flex-row align-items-center justify-content-center gap-5">
@@ -63,7 +63,5 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </footer>

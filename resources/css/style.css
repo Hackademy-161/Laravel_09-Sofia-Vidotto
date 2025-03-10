@@ -105,6 +105,14 @@ h1 {
 }
 
 /* Quiz */
+.bg-quiz{
+    background-color: #fcfbff;
+    background-image: url(/public/images//photo-1540845692348-b9d2bc813a63\ 1.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .quiz-section {
     background-color: #fef7f8;
 }
