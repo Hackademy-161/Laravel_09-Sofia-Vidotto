@@ -33,13 +33,35 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person fs-5"></i><br>
+                        @auth
+                        Hi, {{ Auth::user()->name }}
+                        @else
                         Account
+                        @endauth
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{route ('login')}}">Login</a></li>
-                        <li><a class="dropdown-item" href="{{route ('register')}}">Register</a></li>
+                        @guest
+                        <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                        @endguest
+
+                        @auth
+                        <li><a class="dropdown-item" href="#">My Account</a></li>
+                        <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                        <li><a class="dropdown-item" href="#">Orders</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="text-center">
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-dark">Logout</button>
+                            </form>
+                        </li>
+                        @endauth
                     </ul>
                 </li>
+
 
                 <li class="nav-item text-center mx-2 mx-lg-1">
                     <a class="nav-link" href="#!">

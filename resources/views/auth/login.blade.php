@@ -5,7 +5,6 @@
                 <div class="col-md-6 border shadow roundend bg-white p-4 p-md-5">
                     <h3 class="text-center">Login</h3>
                     <p class="text-center text-muted">Please enter your e-mail and password:</p>
-
                     <form method="POST" action="{{route('login')}}">
                         @csrf
                         @if ($errors->any())
@@ -19,13 +18,12 @@
                         @endif
                         <div class="mb-3">
                             <label class="form-label small">Email</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
                         </div>
                         <div class="mb-3">
                             <label class="form-label small">Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" placeholder="Password" name="password">
                         </div>
-
                         <div class="my-3 text-center">
                             <button type="submit" class="btn btn-custom w-100">Login</button>
                         </div>
@@ -39,7 +37,7 @@
                             <i class="bi bi-github pe-2"></i> <span class="d-md-block d-none">Login With GitHub</span>
                         </button>
                     </div>
-                    <p class="text-center mt-4 back-to-log">Forgot you password? <a href="{{route('register')}}">Recover Password</a></p>
+                    <p class="text-center mt-4 back-to-log">Forgot you password? <a href="#">Recover Password</a></p>
                     <p class="text-center mt-4 back-to-log">You don't have an account? <a href="{{route('register')}}">Register</a></p>
                 </div>
             </div>
