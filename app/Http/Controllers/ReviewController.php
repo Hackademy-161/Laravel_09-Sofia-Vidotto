@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class ReviewController extends Controller
+class ReviewController extends Controller implements HasMiddleware
 {
+
+    public static function middleware(): array
+    {
+        return [
+            'auth',
+        ];
+    }
+
     public function index()
     {
         $reviews = Review::latest()->get();
