@@ -36,20 +36,20 @@ class AuthController extends Controller
                 'email' => $githubUser->email,
                 'github_token' => $githubUser->token,
                 'github_refresh_token' => $githubUser->refreshToken ?? null,
-                'password' => bcrypt(uniqid()),  
+                'password' => bcrypt(uniqid()),
             ]
         );
 
-      
+
         if (!$user->github_id) {
             $user = User::updateOrCreate(
-                ['email' => $githubUser->email],  
+                ['email' => $githubUser->email],
                 [
                     'name' => $githubUser->name ?? $githubUser->nickname,
                     'github_id' => $githubUser->id,
                     'github_token' => $githubUser->token,
                     'github_refresh_token' => $githubUser->refreshToken ?? null,
-                    'password' => bcrypt(uniqid()),  
+                    'password' => bcrypt(uniqid()),
                 ]
             );
         }
@@ -65,6 +65,4 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/');
     }
-
-
 }
