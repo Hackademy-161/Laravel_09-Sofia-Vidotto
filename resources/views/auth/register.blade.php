@@ -1,8 +1,9 @@
 <x-layout title="Register - Bloom Beauty">
     <div class="bg-register pb-5">
-        <div class="container py-5 my-5 register">
+        <div class="container py-5 my-5 py-md-0 my-md-0 register">
             <div class="row justify-content-center p-5 mt-4 mt-md-0">
                 <div class="col-md-6 border shadow roundend bg-white p-4 p-md-5 ">
+
                     <h3 class="text-center">Register</h3>
                     <p class="text-center text-muted">Please fill in the fields below:</p>
 
@@ -19,29 +20,27 @@
                         @endif
                         <div class="mb-3">
                             <label class="form-label small">Name</label>
-                            <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small">Surname</label>
-                            <input type="text" class="form-control" placeholder="Surname">
+                            <input type="text" class="form-control" placeholder="Name" name="name">
                         </div>
                         <div class="mb-3">
                             <label class="form-label small">Email</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
                         </div>
                         <div class="mb-3">
                             <label class="form-label small">Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" placeholder="Password" name="password">
                         </div>
                         <div class="mb-3">
                             <label class="form-label small">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder="Confirm Password">
+                            <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation">
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="newsletter">
                             <label class="form-check-label" for="newsletter">Yes, I want to subscribe to the newsletter now</label>
                         </div>
+                        <div class="my-3 text-center">
                         <button type="submit" class="btn btn-custom w-100">Register</button>
+                        </div>
                     </form>
                     <div class="text-center my-3"><img src="/images/register.png" class="img-fluid"></div>
                     <div class="d-flex flex-row gap-4 justify-content-center">
