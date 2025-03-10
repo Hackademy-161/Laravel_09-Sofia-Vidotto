@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Actions\Fortify\ResetUserPassword;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SkinQuizController;
@@ -23,3 +24,4 @@ Route::post('/quiz/save', [SkinQuizController::class, 'saveResult'])->name('quiz
 Route::get('/auth/github', [AuthController::class, 'redirectToGithub'])->name('github.login');
 Route::get('/auth/github/callback', [AuthController::class, 'handleGithubCallback']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+

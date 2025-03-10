@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 
-use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -66,4 +67,6 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+
 }

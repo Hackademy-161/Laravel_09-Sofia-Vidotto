@@ -105,7 +105,7 @@ h1 {
 }
 
 /* Quiz */
-.bg-quiz{
+.bg-quiz {
     background-color: #fcfbff;
     background-image: url(/public/images//photo-1540845692348-b9d2bc813a63\ 1.png);
     background-size: contain;
@@ -113,6 +113,7 @@ h1 {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 .quiz-section {
     background-color: #fef7f8;
 }
@@ -579,15 +580,16 @@ a.show-more:hover {
     color: #383838;
 }
 
-.back-to-log a{
-    color:#383838;
+.back-to-log a {
+    color: #383838;
     transition: all 1s;
 }
-.back-to-log a:hover{
-    color:#f28597
+
+.back-to-log a:hover {
+    color: #f28597
 }
 
-.bg-register{
+.bg-register {
     background-image: url(/public/images/back-register.png);
     background-size: 100%;
     background-attachment: fixed;

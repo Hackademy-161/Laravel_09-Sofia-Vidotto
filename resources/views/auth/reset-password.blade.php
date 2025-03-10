@@ -7,10 +7,40 @@
                     <p class="text-center text-muted">Please enter your e-mail:</p>
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
-                        <input type="hidden" name="token" class="form-control" value="{{ request()->route('token') }}">
-                        <input type="email" name="email" class="form-control" required placeholder="Email">
-                        <input type="password" name="password" class="form-control" required placeholder="Nuova password">
-                        <input type="password" name="password_confirmation" class="form-control" required placeholder="Conferma password">
+
+                        @if (session('status'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('status') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li><i class="bi bi-exclamation-circle"></i> {{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+
+                        <div class="mb-3">
+                            <input type="hidden" name="token" class="form-control" value="{{ request()->route('token') }}">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" required placeholder="Email">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="password" name="password" class="form-control" required placeholder="New Password">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="password" name="password_confirmation" class="form-control" required placeholder="Confirm New Password">
+                        </div>
+
                         <button type="submit" class="btn btn-custom w-100 mt-3">Reset Password</button>
                     </form>
                 </div>

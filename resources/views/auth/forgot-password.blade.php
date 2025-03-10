@@ -7,7 +7,26 @@
                     <p class="text-center text-muted">Please enter your e-mail:</p>
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
-                        <input type="email" name="email" class="form-control" placeholder="Inserisci la tua email">
+                        
+                        @if (session('status'))
+                        <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                            {{ session('status') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li><i class="bi bi-exclamation-circle"></i> {{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Email">
+                        </div>
                         <button type="submit" class="btn btn-custom w-100 mt-3">Send Reset Link</button>
                     </form>
                 </div>

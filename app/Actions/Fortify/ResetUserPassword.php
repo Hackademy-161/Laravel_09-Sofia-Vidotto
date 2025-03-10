@@ -12,7 +12,6 @@ class ResetUserPassword implements ResetsUserPasswords
     use PasswordValidationRules;
 
     /**
-     * Validate and reset the user's forgotten password.
      *
      * @param  array<string, string>  $input
      */
@@ -25,5 +24,7 @@ class ResetUserPassword implements ResetsUserPasswords
         $user->forceFill([
             'password' => Hash::make($input['password']),
         ])->save();
+
+        redirect()->route('password.request')->with('status', 'Password reset successfully.');
     }
 }
