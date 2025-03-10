@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-white">
     <div class="container-fluid">
         <a class="navbar-brand ps-md-5" href="{{route('homepage')}}"><img src="/images/Bloom Beauty.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,12 +31,12 @@
                     </a>
                 </li>
                 <li class="nav-item text-center mx-2 mx-lg-1">
-                        <i class="bi bi-person fs-5"></i>
-                
-                    <div class="d-flex flex-row">
-                    <a class="nav-link" href="{{route('register')}}">Register</a> |
-                    <a class="nav-link" href="{{route('register')}}">Login</a>
-                    </div>
+                    <a class="nav-link" href="{{route('register')}}">
+                        <div>
+                            <i class="bi bi-person fs-5"></i>
+                        </div>
+                        Account
+                    </a>
                 </li>
                 <li class="nav-item text-center mx-2 mx-lg-1">
                     <a class="nav-link" href="#!">

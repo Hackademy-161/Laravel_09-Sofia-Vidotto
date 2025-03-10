@@ -1,4 +1,4 @@
-<footer class="footer mt-5">
+<footer class="footer pt-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 pb-5">
