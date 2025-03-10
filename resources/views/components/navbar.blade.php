@@ -30,14 +30,17 @@
                         Search
                     </a>
                 </li>
-                <li class="nav-item text-center mx-2 mx-lg-1">
-                    <a class="nav-link" href="{{route('register')}}">
-                        <div>
-                            <i class="bi bi-person fs-5"></i>
-                        </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person fs-5"></i><br>
                         Account
                     </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{route ('login')}}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{route ('register')}}">Register</a></li>
+                    </ul>
                 </li>
+
                 <li class="nav-item text-center mx-2 mx-lg-1">
                     <a class="nav-link" href="#!">
                         <div>

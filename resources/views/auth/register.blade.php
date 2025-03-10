@@ -1,8 +1,8 @@
 <x-layout title="Register - Bloom Beauty">
     <div class="bg-register pb-5">
         <div class="container py-5 my-5 register">
-            <div class="row justify-content-center p-5 mt-4">
-                <div class="col-md-6 border shadow roundend bg-white p-4 p-md-5">
+            <div class="row justify-content-center p-5 mt-4 mt-md-0">
+                <div class="col-md-6 border shadow roundend bg-white p-4 p-md-5 ">
                     <h3 class="text-center">Register</h3>
                     <p class="text-center text-muted">Please fill in the fields below:</p>
 
@@ -52,7 +52,7 @@
                             <i class="bi bi-github pe-2"></i> <span class="d-md-block d-none">Login With GitHub</span>
                         </button>
                     </div>
-                    <p class="text-center mt-4 back-to-log">Do you already have an account? <a href="#">Back to Log In</a></p>
+                    <p class="text-center mt-4 back-to-log">Do you already have an account? <a href="{{route('login')}}">Back to Log In</a></p>
                 </div>
             </div>
         </div>

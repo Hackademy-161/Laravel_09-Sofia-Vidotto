@@ -1,12 +1,12 @@
 <x-layout title="Login - Bloom Beauty">
     <div class="bg-register pb-5">
         <div class="container py-5 my-5 register">
-            <div class="row justify-content-center p-5 mt-4">
+            <div class="row justify-content-center p-5 mt-4 mt-md-0">
                 <div class="col-md-6 border shadow roundend bg-white p-4 p-md-5">
                     <h3 class="text-center">Login</h3>
                     <p class="text-center text-muted">Please enter your e-mail and password:</p>
 
-                    <form method="POST" action="{{route('register')}}">
+                    <form method="POST" action="{{route('login')}}">
                         @csrf
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -38,7 +38,7 @@
                         </button>
                     </div>
                     <p class="text-center mt-4 back-to-log">Forgot you password? <a href="#">Recover Password</a></p>
-                    <p class="text-center mt-4 back-to-log">You don't have an account? <a href="#">Register</a></p>
+                    <p class="text-center mt-4 back-to-log">You don't have an account? <a href="{{route('register')}}">Register</a></p>
                 </div>
             </div>
         </div>
