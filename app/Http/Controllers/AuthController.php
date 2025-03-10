@@ -36,28 +36,26 @@ class AuthController extends Controller
                 'email' => $githubUser->email,
                 'github_token' => $githubUser->token,
                 'github_refresh_token' => $githubUser->refreshToken ?? null,
-                'password' => bcrypt(uniqid()),  // Genera una password casuale
+                'password' => bcrypt(uniqid()),  
             ]
         );
 
-        // Se l'utente non ha github_id, cerca per email
+      
         if (!$user->github_id) {
             $user = User::updateOrCreate(
-                ['email' => $githubUser->email],  // Cerca per email se github_id non è presente
+                ['email' => $githubUser->email],  
                 [
                     'name' => $githubUser->name ?? $githubUser->nickname,
                     'github_id' => $githubUser->id,
                     'github_token' => $githubUser->token,
                     'github_refresh_token' => $githubUser->refreshToken ?? null,
-                    'password' => bcrypt(uniqid()),  // Genera una password casuale
+                    'password' => bcrypt(uniqid()),  
                 ]
             );
         }
 
-        // Effettua il login dell'utente
         Auth::login($user);
 
-        // Reindirizza l'utente alla home page o a una pagina di benvenuto
         return redirect('/')->with('success', 'Login con GitHub effettuato con successo!');
     }
 
