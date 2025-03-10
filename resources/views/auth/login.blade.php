@@ -11,7 +11,7 @@
                         <div class="alert alert-danger">
                             <ul>
                                 @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
+                                <li><i class="bi bi-exclamation-circle"></i> {{ $error }}</li>
                                 @endforeach
                             </ul>
                         </div>
@@ -37,7 +37,7 @@
                             <i class="bi bi-github pe-2"></i> <span class="d-md-block d-none">Login With GitHub</span>
                         </a>
                     </div>
-                    <p class="text-center mt-4 back-to-log">Forgot you password? <a href="#">Recover Password</a></p>
+                    <p class="text-center mt-4 back-to-log">Forgot you password? <a href="{{ route('password.request') }}">Recover Password</a></p>
                     <p class="text-center mt-4 back-to-log">You don't have an account? <a href="{{route('register')}}">Register</a></p>
                 </div>
             </div>
