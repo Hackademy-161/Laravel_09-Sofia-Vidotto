@@ -30,7 +30,7 @@
                     </form>
                     <div class="text-center my-3"><img src="/images/register.png" class="img-fluid"></div>
                     <div class="d-flex flex-row gap-5 justify-content-center">
-                    <button class="btn btn-light  border d-flex align-items-center justify-content-center">
+                        <button class="btn btn-light  border d-flex align-items-center justify-content-center">
                             <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="me-2" width="20"> <span class="d-md-block d-none">Login With Google</span>
                         </button>
                         <a href="{{ route('github.login') }}" class="btn btn-dark border d-flex align-items-center justify-content-center">
