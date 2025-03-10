@@ -13,6 +13,7 @@ class ReviewController extends Controller implements HasMiddleware
     {
         return [
             'auth',
+            // new Middleware('auth', except: ['index'])
         ];
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SkinQuizController;
@@ -17,3 +18,12 @@ Route::post('/review/store', [ReviewController::class, 'store'])->name('review.s
 
 Route::get('/quiz', [SkinQuizController::class, 'index'])->name('quiz.index');
 Route::post('/quiz/save', [SkinQuizController::class, 'saveResult'])->name('quiz.save');
+
+// Reindirizza l'utente a GitHub
+Route::get('/auth/github', [AuthController::class, 'redirectToGithub'])->name('github.login');
+
+// Gestisce il callback da GitHub
+Route::get('/auth/github/callback', [AuthController::class, 'handleGithubCallback']);
+
+// Rotta per il logout
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

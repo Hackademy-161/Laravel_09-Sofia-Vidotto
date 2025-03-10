@@ -45,11 +45,11 @@
                     <div class="text-center my-3"><img src="/images/register.png" class="img-fluid"></div>
                     <div class="d-flex flex-row gap-4 justify-content-center">
                         <button class="btn btn-light  border d-flex align-items-center justify-content-center">
-                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="me-2" width="20"> <span class="d-md-block d-none">Login With Google</span>
+                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="me-2" width="20"> <span class="d-md-block d-none">Register With Google</span>
                         </button>
-                        <button href="{{ url('/auth/redirect') }}" class="btn btn-dark border d-flex align-items-center justify-content-center">
-                            <i class="bi bi-github pe-2"></i> <span class="d-md-block d-none">Login With GitHub</span>
-                        </button>
+                        <a href="{{ route('github.login') }}" class="btn btn-dark border d-flex align-items-center justify-content-center">
+                            <i class="bi bi-github pe-2"></i> <span class="d-md-block d-none">Register With GitHub</span>
+                        </a>
                     </div>
                     <p class="text-center mt-4 back-to-log">Do you already have an account? <a href="{{route('login')}}">Back to Log In</a></p>
                 </div>
