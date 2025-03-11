@@ -59,7 +59,7 @@ class AuthController extends Controller
         return redirect('/')->with('success', 'Login con GitHub effettuato con successo!');
     }
 
-    // Funzione per il logout
+
     public function logout()
     {
         Auth::logout();
@@ -67,6 +67,7 @@ class AuthController extends Controller
     }
 
     public function account(){
+
         return view('auth.account');
     }
 }

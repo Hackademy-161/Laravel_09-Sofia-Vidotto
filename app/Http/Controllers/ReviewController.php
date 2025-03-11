@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -72,5 +73,13 @@ class ReviewController extends Controller
     public function destroy(Review $review)
     {
         //
+    }
+
+    public function user_review($id)
+    {
+        $user = User::find($id);
+        $reviews = $user->reviews;
+
+        return view('review.user', compact('reviews', 'user'));
     }
 }

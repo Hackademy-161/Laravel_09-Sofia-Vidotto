@@ -130,7 +130,10 @@
                     <div class="review-header">
                         <i class="bi bi-person-circle pb-4 fs-3"></i>
                         <div>
-                            <h6>{{ $review->user->name}} <span class="text-muted">✔️ Verified Reviewer</span></h6>
+                            <a href="{{route('review.user' , $review->user->id)}}" class="link-dark">
+                                <h6>{{ $review->user->name}}</h6>
+                            </a>
+                            <span class="text-muted">✔️ Verified Reviewer</span>
                             <p class="review-stars">★★★★★</p>
                         </div>
                     </div>

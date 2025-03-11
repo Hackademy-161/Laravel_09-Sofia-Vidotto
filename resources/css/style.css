@@ -691,7 +691,6 @@ a.show-more:hover {
 
 .pagination {
     --bs-pagination-focus-box-shadow: 0 0 8px #f78da7;
-    border: 1px solid #f78da844;
 }
 
 

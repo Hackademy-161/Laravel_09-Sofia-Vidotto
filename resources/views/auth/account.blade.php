@@ -1,5 +1,4 @@
 <x-layout title="My Account - Bloom Beauty">
-
     <div class="bg-register">
         <div class="container min-vh-100">
             <div class="row pt-5">
@@ -11,7 +10,6 @@
                         <a class="nav-link" href="#" data-target="addresses">Addresses</a>
                         <a class="nav-link" href="#" data-target="orders">Orders <i class="bi bi-arrow-right-short"></i></a>
                         <a class="nav-link" href="#" data-target="wishlist">Wishlist <i class="bi bi-arrow-right-short"></i></a>
-                        <a class="nav-link" href="#" data-target="wishlist">Reviews</a>
                     </nav>
                 </div>
                 <div class="col-md-9">
@@ -20,16 +18,16 @@
                             <h4 class="fw-bold text-dark pb-4">Contact Information</h4>
                             <form>
                                 <div class="mb-3">
-                                    <label class="form-label">Mail</label>
+                                    <label class="form-label small">Mail</label>
                                     <input type="email" class="form-control" placeholder="Email">
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label">First Name</label>
+                                        <label class="form-label small">First Name</label>
                                         <input type="text" class="form-control" placeholder="First Name">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label">Last Name</label>
+                                        <label class="form-label small">Last Name</label>
                                         <input type="text" class="form-control" placeholder="Last Name">
                                     </div>
                                 </div>
@@ -40,11 +38,11 @@
                             <h4 class="fw-bold text-dark pb-4">Change Password</h4>
                             <form>
                                 <div class="mb-3">
-                                    <label class="form-label">Current Password</label>
+                                    <label class="form-label small">Current Password</label>
                                     <input type="password" class="form-control" placeholder="Current Password">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">New Password</label>
+                                    <label class="form-label small">New Password</label>
                                     <input type="password" class="form-control" placeholder="New Password">
                                 </div>
                                 <button type="submit" class="btn btn-custom w-100 py-2">Update Password</button>
