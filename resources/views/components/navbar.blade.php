@@ -16,7 +16,7 @@
                     <a class="nav-link" href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="{{route('blog.index')}}">Blog</a>
                 </li>
             </ul>
 

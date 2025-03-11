@@ -595,3 +595,56 @@ a.show-more:hover {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
+
+/* Blog Index */
+.category-bar {
+    background: rgba(245, 163, 183, 0.479);
+    padding: 10px;
+    text-align: center;
+}
+
+.category-bar .btn {
+    background: white;
+    border-radius: 20px;
+    margin: 5px;
+    border: none;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(180, 176, 190, 0.233);
+    margin-bottom: 20px;
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tags .badge {
+    margin-right: 5px;
+}
+
+.blog p {
+    font-family: "Montserrat";
+    color: #697586;
+}
+
+.data {
+    color: rgb(160, 160, 160)
+}
+
+.bg-blog {
+    background-color: rgba(180, 176, 190, 0.233);
+    color: #383838;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.pagination {
+    --bs-pagination-focus-box-shadow: 0 0 8px #f78da7;
+    border: 1px solid #f78da844;
+}
