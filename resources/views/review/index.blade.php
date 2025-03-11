@@ -5,6 +5,7 @@
                 data-aos-easing="linear"
                 data-aos-duration="1500">
                 <a href="{{route('review.create')}}"><p class="p-5 link-review">Write Your Review <i class="bi bi-arrow-right"></i></p></a>
+                
                 <img src="/images/Slide 16_9 - 1.png" class="img-fluid">
             </div>
             <div class="col-12 col-md-9 pt-2" data-aos="fade-down"

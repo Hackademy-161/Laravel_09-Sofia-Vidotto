@@ -24,10 +24,11 @@
     <x-navbar />
 
 
-    <div>
-        
+    @if (session('message'))
+    <div class="alert alert-success">
+        <p>{{session('message')}}</p>
     </div>
-
+    @endif
 
     <!-- views -->
     <div>

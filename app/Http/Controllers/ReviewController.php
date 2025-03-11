@@ -6,9 +6,17 @@ use App\Models\User;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class ReviewController extends Controller
+class ReviewController extends Controller implements HasMiddleware
 {
+
+    public static function middleware(): array
+    {
+        return [
+            'auth',
+        ];
+    }
     /**
      * Display a listing of the resource.
      */
@@ -35,9 +43,17 @@ class ReviewController extends Controller
             'name' => $request->name,
             'title' => $request->title,
             'comment' => $request->comment,
-            'img' => $request->file('img')->store('images', 'public'),
+            'img' => $request->hasFile('img') ? $request->file('img')->store('images', 'public') : null,
             'rating' => $request->rating,
             'user_id' => Auth::user()->id,
+        ]);
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+            'comment' => 'required|string',
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'rating' => 'required',
         ]);
 
         return redirect(route('review.index'))->with('message', 'Comment sent.');
