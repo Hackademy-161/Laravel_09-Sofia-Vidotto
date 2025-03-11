@@ -4,34 +4,72 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Support\Facades\Auth;
 
-class ReviewController extends Controller implements HasMiddleware
+class ReviewController extends Controller
 {
-
-    public static function middleware(): array
-    {
-        return [
-            'auth',
-            // new Middleware('auth', except: ['index'])
-        ];
-    }
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        $reviews = Review::latest()->get();
-        return view('review.index', compact('reviews'));
+        return view('review.index');
     }
 
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('review.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         Review::create([
             'name' => $request->name,
-            'comment' => $request->comment,
             'title' => $request->title,
+            'comment' => $request->comment,
+            'img' => $request->file('img')->store('images', 'public'),
             'rating' => $request->rating,
+            'user_id' => Auth::user()->id,
         ]);
 
         return redirect(route('review.index'))->with('message', 'Comment sent.');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Review $review)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Review $review)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Review $review)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Review $review)
+    {
+        //
     }
 }

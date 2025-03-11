@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -238,6 +239,13 @@ class PublicController extends Controller
     {
         $products = array_slice($this->products, -4);
         $product = collect($this->products)->firstWhere('id', $id);
-        return view('details', ['product' => $product], ['products' => $products]);
+
+        $reviews = Review::all();
+
+        return view('details', [
+            'product' => $product,
+            'products' => $products,
+            'reviews' => $reviews
+        ]);
     }
 }

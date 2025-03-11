@@ -89,6 +89,5 @@
         </div>
     </div>
 
-
     <x-pagination />
 </x-layout>

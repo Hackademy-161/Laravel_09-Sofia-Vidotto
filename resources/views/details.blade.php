@@ -125,51 +125,22 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <!-- Recensione 1 -->
+                @foreach ($reviews as $review)
                 <div class="review-card">
                     <div class="review-header">
                         <i class="bi bi-person-circle pb-4 fs-3"></i>
                         <div>
-                            <h6>Cathy K. <span class="text-muted">✔️ Verified Reviewer</span></h6>
+                            <h6>{{ $review->user->name}} <span class="text-muted">✔️ Verified Reviewer</span></h6>
                             <p class="review-stars">★★★★★</p>
                         </div>
                     </div>
-                    <h5>VERY MOISTURIZING</h5>
-                    <p>I didn't know how effective the gel cream would be since I was skeptical of the texture, but my sensitive skin loved it...</p>
-                    <img src="/images/r1.png" class="rounded pb-3" alt="Review Image">
-                    <p class="review-date">26/02/23</p>
+                    <h5 class="text-uppercase">{{ $review->title}}</h5>
+                    <p>{{ $review->comment }}</p>
+                    <img src="{{Storage::url($review->img)}}" width="200px">
+                    <p class="review-date pt-4">{{$review->created_at}}</p>
+
                 </div>
-
-                <!-- Recensione 2 -->
-                <div class="review-card">
-                    <div class="review-header">
-
-                        <i class="bi bi-person-circle pb-4 fs-3"></i>
-                        <div>
-                            <h6>Aileen R.</h6>
-                            <p class="review-stars">★★★★★</p>
-                        </div>
-                    </div>
-                    <h5>REALLY LIGHT AND NOT STICKY.</h5>
-                    <p>Really light and not sticky. My skin soaked it right up! I mix it with the green tea products and it helps balance my combo skin.</p>
-                    <img src="/images/r2.png" class="rounded  pb-3" alt="Review Image">
-                    <p class="review-date">12/02/23</p>
-                </div>
-
-                <!-- Recensione 3 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <i class="bi bi-person-circle pb-4 fs-3"></i>
-                        <div>
-                            <h6>Cathy K. <span class="text-muted">✔️ Verified Reviewer </span></h6>
-                            <p class="review-stars">★★★★★</p>
-                        </div>
-                    </div>
-                    <h5>Tried the kit since it</h5>
-                    <p>Tried the kit since it was my first time trying this product line. So far I really am enjoying it and it gives my skin a smooth and fresh look morning and night!</p>
-                    <p class="review-date">02/02/23</p>
-                </div>
-
+                @endforeach
                 <div class="col-12 text-center">
                     <a href="#" class="show-more">Show More <i class="bi bi-arrow-right-short"></i></a>
                 </div>

@@ -24,6 +24,10 @@
     <x-navbar />
 
 
+    <div>
+        
+    </div>
+
 
     <!-- views -->
     <div>

@@ -513,6 +513,44 @@ button#apply-filters:hover {
 
 
 /* Review */
+.terms p,
+.terms ul {
+    font-family: "Montserrat";
+    text-align: justify;
+}
+
+.terms ul {
+    list-style: disc;
+}
+
+.link-review {
+    color: #f78da7;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bold;
+    transition: all 1s;
+}
+
+.link-review:hover {
+    color: black
+}
+
+.terms ul {
+    list-style: disc;
+}
+
+.terms a {
+    color: black;
+    cursor: pointer;
+    transition: all 1s;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: #f28597
+}
+
 .review-card {
     border-bottom: 1px solid #ddd;
     padding-bottom: 15px;
@@ -606,9 +644,16 @@ a.show-more:hover {
 
 .category-bar .btn {
     background: white;
+    border: 1px solid white;
     border-radius: 20px;
     margin: 5px;
-    border: none;
+    transition: all 1s;
+}
+
+.category-bar .btn:hover {
+    background: rgba(255, 150, 177, 0.658);
+    color: white;
+    border: 1px solid white;
 }
 
 .blog-card {

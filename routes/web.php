@@ -15,6 +15,7 @@ Route::get('/shop/all', [PublicController::class, 'all'])->name('all');
 Route::get('/shop-details/{id}/{name}', [PublicController::class, 'details'])->name('details');
 
 Route::get('/review/index', [ReviewController::class, 'index'])->name('review.index');
+Route::get('/review/create', [ReviewController::class, 'create'])->name('review.create');
 Route::post('/review/store', [ReviewController::class, 'store'])->name('review.store');
 
 
@@ -27,5 +28,5 @@ Route::get('/auth/github/callback', [AuthController::class, 'handleGithubCallbac
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
-Route::get('/blog-index', [BlogController::class, 'blog_index'])->name('blog.index');
+Route::get('/blog-index', [BlogController::class, 'index'])->name('blog.index');
 
