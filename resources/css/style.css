@@ -37,6 +37,11 @@ a.nav-link:hover {
     color: #f8a1b0 !important
 }
 
+/* Header-2 */
+
+.header-2 ul{
+list-style-type: disc;
+}
 
 /* Header */
 .bg-first {
@@ -636,6 +641,16 @@ a.show-more:hover {
 
 
 /* Blog Index */
+.link-article{
+    color: black;
+    text-decoration: underline black;
+    transition: all 1s;
+    font-size: 20px;
+}
+.link-article:hover{
+    color: #f28597;
+    text-decoration: underline #f28597;
+}
 .category-bar {
     background: rgba(245, 163, 183, 0.479);
     padding: 10px;
@@ -721,3 +736,4 @@ a.show-more:hover {
 .content-section.active {
     display: block;
 }
+
