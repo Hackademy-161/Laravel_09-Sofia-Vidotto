@@ -1,5 +1,5 @@
 <section class="quiz-section shadow text-center my-5">
-    <div class="container p-2">
+    <div class="container p-2 my-5">
         <div class="quiz-content">
             @if(Route::currentRouteName() === 'quiz.index')
             <div class="col-6">

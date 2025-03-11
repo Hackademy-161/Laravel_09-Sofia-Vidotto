@@ -26,7 +26,7 @@ Route::post('/quiz/save', [SkinQuizController::class, 'saveResult'])->name('quiz
 Route::get('/auth/github', [AuthController::class, 'redirectToGithub'])->name('github.login');
 Route::get('/auth/github/callback', [AuthController::class, 'handleGithubCallback']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
+Route::get('/my-account', [AuthController::class, 'account'])->name('auth.account');
 
 Route::get('/blog-index', [BlogController::class, 'index'])->name('blog.index');
 

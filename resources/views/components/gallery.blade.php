@@ -1,4 +1,4 @@
-<div class="container py-4 text-center">
+<div class="container py-5 my-5 text-center">
     <h2 class="gallery-title text-center"><img src="images/left.png"> SHARE HOW YOU BLOSSOMED WITH <span class="highlight">#BLOOMBEAUTY</span> <img src="images/right.png"></h2>
     <a href="#" class="see-all">see all</a>
 

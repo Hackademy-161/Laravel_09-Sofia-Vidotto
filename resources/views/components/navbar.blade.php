@@ -46,7 +46,7 @@
                         @endguest
 
                         @auth
-                        <li><a class="dropdown-item" href="#">My Account</a></li>
+                        <li><a class="dropdown-item" href="{{ route('auth.account') }}">My Account</a></li>
                         <li><a class="dropdown-item" href="#">Wishlist</a></li>
                         <li><a class="dropdown-item" href="#">Orders</a></li>
                         <li>

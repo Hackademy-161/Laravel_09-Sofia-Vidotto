@@ -29,6 +29,7 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
+        // {Auth::user()->reviews()->create altro metodo
         Review::create([
             'name' => $request->name,
             'title' => $request->title,

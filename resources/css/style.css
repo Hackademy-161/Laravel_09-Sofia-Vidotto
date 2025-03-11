@@ -32,9 +32,9 @@ a.nav-link:hover {
     color: #f78da7;
 }
 
-.active {
+#account-nav .active {
     font-weight: bold;
-    color: #f78da7 !important
+    color: #f8a1b0 !important
 }
 
 
@@ -692,4 +692,33 @@ a.show-more:hover {
 .pagination {
     --bs-pagination-focus-box-shadow: 0 0 8px #f78da7;
     border: 1px solid #f78da844;
+}
+
+
+
+/* My Account */
+.account-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-nav {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
 }
