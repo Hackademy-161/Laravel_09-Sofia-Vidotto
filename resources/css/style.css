@@ -39,8 +39,8 @@ a.nav-link:hover {
 
 /* Header-2 */
 
-.header-2 ul{
-list-style-type: disc;
+.header-2 ul {
+    list-style-type: disc;
 }
 
 /* Header */
@@ -274,7 +274,13 @@ h1 {
 }
 
 .link-pink {
-    color: #F5A3B7
+    color: #F5A3B7;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.link-pink:hover {
+    color: #383838
 }
 
 
@@ -641,16 +647,33 @@ a.show-more:hover {
 
 
 /* Blog Index */
-.link-article{
+.comments p{
+    text-align: justify!important;
+}
+.body-article {
+    font-family: "Montserrat";
+    color: rgb(100, 100, 100);
+}
+.body-article h2, .body-article h3{
+    color: #383838;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Poppins";
+}
+
+.link-article {
     color: black;
     text-decoration: underline black;
     transition: all 1s;
     font-size: 20px;
 }
-.link-article:hover{
+
+.link-article:hover {
     color: #f28597;
     text-decoration: underline #f28597;
 }
+
 .category-bar {
     background: rgba(245, 163, 183, 0.479);
     padding: 10px;
@@ -736,4 +759,3 @@ a.show-more:hover {
 .content-section.active {
     display: block;
 }
-

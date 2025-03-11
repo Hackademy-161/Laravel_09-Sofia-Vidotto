@@ -1,5 +1,5 @@
 <div class="container text-center my-5">
-    <h3 class="fw-bold text-uppercase"><img src="images/left.png">On The Blog<img src="images/right.png"></h3>
+    <h3 class="fw-bold text-uppercase"><img src="/images/left.png">On The Blog<img src="/images/right.png"></h3>
     <a href="#" class="see-all">see all</a>
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
